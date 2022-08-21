@@ -15,17 +15,7 @@ import java.util.List;
 @Entity
 @Table(name = "user")
 public class User {
-    public enum Status{
-        User("user"),ADMIN("admin"),BANNED("banned");
-        private String statusName;
-
-        Status(String StatusName) {
-            this.statusName=statusName;
-        }
-        public String getStatusName(){
-            return statusName;
-        }
-    }
+  
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="user_id")
